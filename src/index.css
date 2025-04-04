@@ -12,3 +12,28 @@ body {
     color: #D9D9D9;
     height: 100vh;
 }
+
+header {
+    text-align: center;
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #F9F4DA;
+}
+
+p {
+    max-width: 350px;
+    color: #8E8E8E;
+}
+
+.langs {
+    margin-top: 70px;
+    list-style-type: none;
+    display: flex;
+}
