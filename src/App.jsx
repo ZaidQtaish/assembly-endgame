@@ -21,6 +21,16 @@ function App() {
           <li className='ruby'>Ruby</li>
           <li className='asm'>Assembly</li>
         </ul>
+        <div className='letters'>
+          <div className='letter-container'></div>
+          <div className='letter-container'></div>
+          <div className='letter-container'></div>
+          <div className='letter-container'></div>
+          <div className='letter-container'></div>
+          <div className='letter-container'></div>
+          <div className='letter-container'></div>
+          <div className='letter-container'></div>
+        </div>
     </main>
   );
 }
