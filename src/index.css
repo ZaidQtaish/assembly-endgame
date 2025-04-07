@@ -1,84 +1,195 @@
 * {
     box-sizing: border-box;
+    caret-color: transparent;
+    font-family: "Hanken Grotesk", Arial, sans-serif;
 }
 
 body {
     margin: 0;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    font-family: "Hanken Grotesk", Arial, sans-serif;
     background-color: #262626;
     color: #D9D9D9;
-    height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 5px;
 }
 
 header {
     text-align: center;
-    margin-top: 70px;
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 10px;
 }
 
-h1 {
-    font-size: 20px;
+header>h1 {
+    font-size: 22px;
     font-weight: 500;
     color: #F9F4DA;
+    margin: 0;
 }
 
-p {
+header>p {
+    margin-top: 5px;
     max-width: 350px;
     color: #8E8E8E;
 }
 
+.status {
+    text-align: center;
+    border-radius: 4px;
+    padding: 6px;
+    max-width: 500px;
+    min-width: 400px;
+    height: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.status>* {
+    margin: 0;
+    padding: 0;
+    color: #F9F4DA;
+    font-weight: 500;
+}
+
+.won {
+    background-color: #10A95B;
+}
+
+.lost {
+    background-color: #BA2A2A;
+}
+
+.farewell {
+    background-color: #7A5EA7;
+    border: 1px dashed #323232;
+}
+
 .langs {
-    margin-top: 70px;
+    margin-top: 40px;
     list-style-type: none;
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 350px;
+    gap: 5px;
 }
 
-.langs > li {
-    margin-right: 1.5px;
+.langs>li {
     border-radius: 3px;
-    padding: 5px;
-    font-weight: 700;
-    font-size: 14px;
+    padding: 6px;
+    font-weight: 500;
+    font-size: 15px;
+    position: relative;
 }
 
-.html {
-    background-color: #E2680F;
-}.css {
-    background-color: #328AF1;
-}.js {
-    background-color: #F4EB13;
-    color: #1E1E1E;
-}.react {
-    background-color: #2ED3E9;
-    color: #1E1E1E;
-}.ts {
-    background-color: #298EC6;
-}.node {
-    background-color: #599137;
-}.py {
-    background-color: #FFD742;
-    color: #1E1E1E;
-}.ruby {
-    background-color: #D02B2B;
-}.asm {
-    background-color: #2D519F;
+li.lost::before {
+    content: "💀";
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 0.85rem;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .letters {
     display: flex;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    gap: 3px;
 }
 
-.letter-container {
+.letter {
     width: 50px;
     height: 50px;
     background-color: #323232;
     border-bottom: solid 1px #F9F4DA;
-    margin-right: 2px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.keyboard {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 11px;
+    flex-wrap: wrap;
+    max-width: 550px;
+}
+
+.key {
+    background-color: #FCBA29;
+    border: solid 1px #D7D7D7;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 6px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 23px;
+    color: #1E1E1E;
+    border-radius: 4px;
+}
+
+.key:hover {
+    background-color: #ffcd60;
+}
+
+.correct {
+    background-color: #10A95B;
+}
+
+.correct:hover {
+    background-color: #10A95B;
+}
+
+.wrong {
+    background-color: #EC5D49;
+}
+
+.wrong:hover {
+    background-color: #EC5D49;
+}
+
+.new-game {
+    background-color: #11B5E5;
+    border: 1px solid #D7D7D7;
+    border-radius: 4px;
+    width: 270px;
+    height: 50px;
+    padding: 6px 12px;
+    display: block;
+    margin-inline: auto;
+    margin-top: 40px;
+    color: #1E1E1E;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23px;
+}
+
+.new-game:hover {
+    background-color: #5ebeea;
+}
+
+button:disabled {
+    opacity: 0.5
+}
+
+.missed {
+    color: #EC5D49;
 }
